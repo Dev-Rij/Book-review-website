@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/login.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <form action="/user/login" method="POST" class="login-form">
+            <div class="logo-container">
+                <img src="/images/logo.jpeg" alt="Logo" class="logo">
+            </div>
+            
+            <% if (locals.error) { %>
+                <p><%= error %></p>
+            <% } %>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+            <span>Do not have an account? </span><a href="/user/signup">Sign-up.</a>
+        </form>
+    </div>
+</body>
+</html>

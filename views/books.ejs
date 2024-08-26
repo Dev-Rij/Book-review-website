@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/books.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+        <main>
+            <section class="books-page-searchbar">
+                <form action="/search" method="get">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" id="search-query" name="q" placeholder="Search a book">
+                </form>
+            </section>
+
+            <section class="books-page-bookList">
+
+                <% if (locals.books) { %>
+                    <% books.forEach(book=> { %>
+                        <div class="book-section">
+                            <div class="book-image">
+                                <img src="<%= book.coverPhoto %>" alt="Book Cover">
+                            </div>
+                            <div class="book-info">
+                                <p class="book-title">
+                                    <%= book.name %>.
+                                </p>
+                                <p class="book-author">
+                                    <%= book.author %>
+                                </p>
+                            </div>
+                            <div class="book-link">
+                                <a href="/books/card?book=<%= book.name %>" class="btn">Read reviews</a>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } %>
+
+            </section>
+                        
+        </main>
+    <%- include("./partials/footer.ejs") %>            
+    <%- include("./partials/modal.ejs") %>
+</body>
+<script src="/js/modal.js"></script>
+
+</html>

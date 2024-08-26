@@ -1,0 +1,153 @@
+/*main*/
+
+main {
+    background-color: var(--bg-section1);
+}
+
+
+/*section 1*/
+.books-page-searchbar {
+    padding: var(--p72px) var(--p160px) 0rem var(--p160px);
+}
+
+
+.books-page-searchbar form {
+    height: 15%;
+    width: 100%;
+
+    background-color: var(--search-bar);
+
+    border-radius: 24px;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.books-page-searchbar form:hover {
+    background-color: var(--search-hover);
+
+}
+
+.books-page-searchbar form input::placeholder {
+    color: #fff;
+}
+
+.books-page-searchbar form input {
+    height: 3rem;
+    width: 85%;
+    background: transparent;
+
+    padding-left: var(--p32px);
+
+    font-size: 1.5rem;
+
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}
+
+.books-page-searchbar form button {
+    background: transparent;
+
+    color: #fff;
+    height: 3rem;
+    width: 10%;
+    border-radius: 16px;
+
+    font-size: 1.5rem;
+
+    border: none;
+    transition: background 0.3s ease-out;
+}
+
+
+.books-page-searchbar form button:hover {
+    background: #4A4A4A;
+}
+
+
+
+/*section 2*/
+.books-page-bookList {
+    display: flex;
+    flex-direction: column;
+
+    height: 85%;
+
+    padding: var(--p72px) var(--p400px) 0rem var(--p400px);
+}
+
+.book-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /* Adjust height as needed */
+    background-color: #fff;
+    /* Background color for the container */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    padding: 0rem var(--p40px);
+    margin: var(--m16px) 0rem;
+}
+
+.book-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 0.3;
+}
+
+.book-image img {
+    width: auto;
+    height: 80%;
+    object-fit: cover;
+    /* This will crop the image to fill the container while maintaining its aspect ratio */
+    border-radius: 4px;
+}
+
+.book-info {
+    flex-grow: 1;
+    margin-left: 20px;
+    color: #252A34;
+    /* Text color */
+}
+
+.book-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #4A4A4A;
+    /* Book title color */
+}
+
+.book-author {
+    font-size: 1em;
+    margin: 5px 0 0;
+    color: #252A34;
+    /* Author name color */
+}
+
+.book-link .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1A1F71;
+    /* Button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.book-link .btn:hover {
+    background-color: #252A34;
+    /* Button hover color */
+}

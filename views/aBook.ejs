@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/aBook.css">
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+        <section class="book-review-card">
+            <div class="book-card">
+                <div class="book-image">
+                    <img src="<%= Book.coverPhoto %>" alt="Book Cover">
+                </div>
+                <div class="book-reviews">
+                    <div class="reviews-header" id="reviews-header">
+                        <h2>Reviews</h2>
+                        <span class="toggle-arrow" id="toggle-arrow"> <i class="fa-solid fa-angle-down"></i> </span>
+                        <!-- Down arrow symbol -->
+                    </div>
+                    <ul class="reviews-list" id="reviews-list">
+
+                        <% if (Book.reviews) { %>
+
+                            <% Book.reviews.forEach(element=> { %>
+                                <li class="review-item">
+                                    <p>
+                                        <%= element.content %>
+                                    </p>
+                                    <span>- <%= element.commenter %></span>
+                                </li>
+                            <% }) %>
+
+                        <% } %>
+                    </ul>
+                    <div class="add-review">
+                        <h3>Add Your Review</h3>
+                        <form action="/books/submit-review?book=<%= Book.name %>" method="POST">
+                            <textarea name="review" placeholder="Write your review..." required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <%- include("./partials/footer.ejs") %>
+    <%- include("./partials/modal.ejs") %>
+</body>
+<script src="/js/reviews.js"></script>
+
+</html>

@@ -1,0 +1,298 @@
+.section-searchbar {
+    height: 65vh;
+
+    padding: var(--p72px) var(--p56px) 0rem var(--p56px);
+
+    background-color: var(--bg-section1);
+    
+    display: flex;
+
+    box-sizing: content-box;
+}
+
+.main-container {
+    height: 80%;
+    width: 50%;
+
+    margin-right: var(--m64px);
+}
+
+.main-container .content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-container .content h1 {
+    width: 100%;
+    height: 30%;
+
+    font-size: 2.75rem;
+
+    color: #4A4A4A;
+
+    margin: var(--m96px) 0rem var(--m32px) 0rem;
+}
+
+
+.main-container .content form {
+    height: 15%;
+    width: 80%;
+    background-color: var(--search-bar);
+    
+    border-radius: 24px;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.main-container .content form:hover {
+    background-color: var(--search-hover);
+}
+
+.main-container .content form input::placeholder {
+    color: #fff;
+}
+
+.main-container .content form input {
+    height: 3rem;
+    width: 85%;
+    background: transparent;
+
+    padding-left: var(--p32px);
+
+    font-size: 1.5rem;
+
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}
+
+.main-container .content form button {
+    background: transparent;
+
+    color: #fff;
+    height: 3rem;
+    width: 10%;
+    border-radius: 16px;
+
+    font-size: 1.5rem;
+
+    border: none;
+    transition: background 0.3s ease-out;
+}
+
+
+.main-container .content form button:hover {
+    background: #4A4A4A;
+}
+
+.section-searchbar img {
+    width: 50%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+/*section 2*/
+
+.section-categories {
+    height: 220vh;
+
+    padding: var(--p72px) var(--p56px) 0rem var(--p56px);
+
+    background-color: var(--bg-section2);
+
+    box-sizing: content-box;
+}
+
+.section-categories h1 {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+
+.categories-grid {
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 30px;
+
+    margin-top: var(--m64px);
+}
+
+
+.categories-grid-item {
+    background-color: #ffff;
+    height: 500px;
+    width: 350px;
+
+    border-radius: 16px;
+
+
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.img-size {
+    height: 300px;
+    width: 300px;
+}
+
+
+.categories-grid-item span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.categories-button-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: var(--m56px);
+}
+
+.categorie-browse {
+    text-decoration: none;
+
+    box-sizing: content-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    ;
+
+    color: #EAEAEA;
+
+    background-color: var(--button-cta);
+    
+    text-align: center;
+
+    padding: var(--p16px) var(--p32px);
+
+    border-radius: 24px;
+
+    font-size: 2rem;
+
+    border: 2px solid black;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.categorie-browse:hover {
+    background-color: #2533A0;
+    transform: scale(1.05);
+}
+
+
+
+
+/*section books*/
+
+.section-books {
+    height: 65vh;
+
+    background-color: var(--bg-section1);
+
+    padding: var(--p72px) var(--p56px) 0rem var(--p56px);
+
+    display: flex;
+
+    box-sizing: content-box;
+}
+
+
+.section-books-left {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-books-left h1 {
+    margin: var(--m128px) 0rem var(--m64px) 0rem;
+}
+
+
+
+.section-books-right {
+    width: 50%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.books-grid-item {
+    height: 200px;
+    width: 200px;
+
+    border-radius: 24px;
+
+    background-color: #fff;
+
+    place-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.books-grid-item-1 {
+    background-image: url('https://cdn.kobo.com/book-images/08ba5a67-f48d-420e-be8e-6de7a73b7d85/353/569/90/False/pride-prejudice-13.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.books-grid-item-2 {
+    background-image: url('https://m.media-amazon.com/images/I/611OWa8x+WL._AC_UF1000,1000_QL80_.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.books-grid-item-3 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlVdlJKwvOCqwCJcnR8YTt51qND0j8T9OJQ&s');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.books-grid-item-4 {
+    background-image: url('https://media.shortform.com/covers/png/the-lean-startup-cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.books-grid-item a {
+    display: none;
+}
+
+.books-grid-item:hover a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+

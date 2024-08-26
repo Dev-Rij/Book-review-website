@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Categories</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/categoriesAndBooks.css">
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    
+        <section class="section-categories">    
+            <div class="categories-bar">
+
+                <% if (categories.length < 5) { %>
+                    <% categories.forEach(category => { %>
+                        <div class="category-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVe6QYeFSkNMj7fCmgymQ1iirFYgguiA2oQ&s" alt="Novels">
+                            <span><%= category.name %></span>
+                            <a href="/categories?explore=<%= category.name %>" class="btn btn-primary">Explore</a>
+                        </div>    
+                    <% }) %>                 
+                <% } %>
+            
+                <% if (categories.length > 4) { %>
+                    <% for( let i = 0; i < 5; i++ ) { %>
+                        <div class="category-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVe6QYeFSkNMj7fCmgymQ1iirFYgguiA2oQ&s" alt="Novels">
+                            <span><%= categories[i].name %></span>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>    
+                    <% } %>
+                <% } %>
+
+            </div>
+        </section>
+
+
+        <section class="books-page-bookList">
+    
+                <% if (books.length == 0) { %>
+                    <p>We are sorry we don't have that book available.</p>
+                    <p>Please upload the book, so that until you come next time people can review that book</p>
+                <% } %>
+
+                <% books.forEach(book => { %>
+                    <div class="book-section">
+                        <div class="book-image">
+                            <img src="<%= book.coverPhoto %>" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <p class="book-title"><%= book.name %></p>
+                            <p class="book-author"><%= book.author %> </p>
+                        </div>
+                        <div class="book-link">
+                            <a href="/books/card?book=<%= book.name %>" class="btn">Read reviews</a>
+                        </div>
+                    </div>
+                <% }) %>
+           
+        </section>
+    
+    <%- include("./partials/footer.ejs") %>
+    <%- include("./partials/modal.ejs") %>
+</body>
+<script src="/js/modal.js"></script>
+</html>

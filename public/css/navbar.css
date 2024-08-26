@@ -1,0 +1,212 @@
+header {
+    height: 15vh;
+    width: 100%;
+}
+
+.navbar {
+    height: 100%;
+    width: 100%;
+
+    padding: 0rem var(--p40px);
+
+    background-color: var(--h-f);
+
+    display: flex;
+
+}
+
+.logo {
+    width: 50%;
+    height: 100%;
+
+
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 90px;
+    width: 90px;
+
+    border-radius: 50%;
+}
+
+.pages {
+    width: 50%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: end;
+
+}
+
+
+.nav-pages-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-pages-list li {
+    list-style-type: none;
+
+    margin: 0rem var(--m32px);
+
+    box-sizing: content-box;
+
+    padding: var(--p16px) var(--p32px);
+}
+
+.nav-pages-list li .a {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 1.25rem;
+
+    border-bottom: 0px solid transparent;
+    /* No visible border initially*/
+    transition: border-bottom 0.2s linear;
+}
+
+
+.nav-pages-list li .a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+.nav-form-loader-button {
+    height: 20px;
+    width: 120px;
+
+    padding: var(--p16px) var(--p8px) !important;
+
+    background-color: var(--search-bar);
+
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition: background-color 0.3s ease;
+}
+
+.nav-form-loader-button button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.25rem;
+    border: none;
+    background: none;
+}
+
+.nav-form-loader-button:hover {
+    background-color: var(--search-hover);
+}
+
+
+/* Modal container */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    /* Ensures it appears above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enables scrolling if the content is too tall */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #EAEAEA;
+    /* Same as the form background color */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #252A34;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #FF2E63;
+    /* Change color on hover */
+}
+
+
+.upload-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #EAEAEA;
+    /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #252A34;
+    /* Label color */
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #252A34;
+    /* Border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #08D9D6;
+    /* Button background color */
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #FF2E63;
+    /* Button hover color */
+}
