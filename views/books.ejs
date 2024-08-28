@@ -24,6 +24,13 @@
             <section class="books-page-bookList">
 
                 <% if (locals.books) { %>
+                    <% if (books.length == 0) { %>
+                        <P>We are sorry , Book currently not available.</P>
+                        <p>Please upload the book , so that people can review it untill you come back.</p>
+                    <% } %>
+                <% } %>
+
+                <% if (locals.books) { %>
                     <% books.forEach(book=> { %>
                         <div class="book-section">
                             <div class="book-image">
