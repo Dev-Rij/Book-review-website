@@ -296,3 +296,117 @@
     text-decoration: none;
 }
 
+
+
+@media only screen and (max-width: 480px) {
+    .section-searchbar {
+        height: auto;
+        padding: var(--p32px) var(--p16px);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main-container .content h1 {
+        font-size: 2rem;
+        margin: var(--m32px) 0rem var(--m16px) 0rem;
+        text-align: center;
+    }
+
+    .main-container .content form {
+        width: 100%;
+        height: 3rem;
+        margin-top: var(--m16px);
+    }
+
+    .main-container .content form input {
+        height: 2.5rem;
+        width: 75%;
+        font-size: 1.25rem;
+        padding-left: var(--p16px);
+    }
+
+    .main-container .content form button {
+        height: 2.5rem;
+        width: 15%;
+        font-size: 1.25rem;
+    }
+
+    .section-searchbar img {
+        width: 90%;
+        height: auto;
+        margin-top: var(--m16px);
+    }
+
+    /* Section Categories */
+    .section-categories {
+        /* padding: var(--p32px) var(--p16px);
+        height: auto; */
+        display: none;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: var(--m32px);
+        margin-top: var(--m32px);
+    }
+
+    .categories-grid-item {
+        height: 250px;
+        width: 90%;
+    }
+
+    .img-size {
+        height: 150px;
+        width: 150px;
+    }
+
+    .categories-button-container {
+        margin-top: var(--m32px);
+    }
+
+    .categorie-browse {
+        font-size: 1.5rem;
+        padding: var(--p8px) var(--p16px);
+    }
+
+    /* Section Books */
+    .section-books {
+        /* padding: var(--p32px) var(--p16px);
+        flex-direction: column;
+        align-items: center; */
+        display: none;
+    }
+
+    .section-books-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-books-left h1 {
+        font-size: 2rem;
+        margin: var(--m32px) 0rem var(--m16px) 0rem;
+    }
+
+    .section-books-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--m16px);
+        margin-top: var(--m32px);
+    }
+
+    .books-grid-item {
+        height: 150px;
+        width: 90%;
+    }
+
+    .books-grid-item:hover a {
+        font-size: 1rem;
+    }
+}

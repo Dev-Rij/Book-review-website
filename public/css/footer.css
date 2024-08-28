@@ -38,3 +38,50 @@ footer {
     width: 50px;
     margin: 0 var(--m8px);
 }
+
+
+
+@media only screen and (max-width: 480px) {
+    footer {
+        padding: var(--p16px) var(--p16px);
+        height: auto;
+        text-align: left;
+    }
+
+    .footer-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer-sentence {
+        font-size: 1.25rem;
+        margin-bottom: var(--m16px);
+        text-align: center;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: var(--m16px);
+    }
+
+    .footer-links ul li {
+        margin: var(--m8px) 0;
+    }
+
+    .footer-links ul li a {
+        font-size: 1.25rem;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--m16px);
+    }
+
+    .footer-social img {
+        height: 40px;
+        width: 40px;
+        margin: 0 var(--m8px);
+    }
+}
