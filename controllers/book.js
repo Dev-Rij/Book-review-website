@@ -61,7 +61,8 @@ async function handleBookUpload(req,res){
         const newBook = await book.create({
             name: req.body.name,
             author: req.body.author,
-            coverPhoto: result.secure_url, 
+            coverPhoto: result.secure_url,
+            category: req.body.category 
         });
 
         await newBook.save();
