@@ -45,9 +45,7 @@ async function renderAbook(req,res){
 
 
 async function handleBookUpload(req,res){
-    try {
-        console.log(req.file);
-        
+    try { 
         if (!req.file) {
             return res.status(400).send('No file uploaded.');
         }

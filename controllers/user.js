@@ -3,7 +3,6 @@ const user = require('../models/user')
 
 async function handleSignup(req,res){
     const body = req.body
-    console.log(body);
     try {
         await user.create({
             name: body.name,
@@ -23,7 +22,6 @@ async function handleSignup(req,res){
     
         try {
             const token = await user.comparePasswordAndReturnToken(email, password)
-            console.log(token);
             if (!token) {
                 throw new Error("token is missing")
             }
